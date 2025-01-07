@@ -1,0 +1,59 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon/components";
+import Container from "@components/container.astro";
+
+
+---
+
+<section class="mb-16">
+  <Container>
+    <div class="mb-8 text-center">
+      <p class="text-sm text-green-400">About Allē</p>
+      <h2 class="text-6xl lg:text-5xl font-bold lg:tracking-tight">
+        Allē's Story
+      </h2>
+      <p class="text-lg mt-4 text-slate-600 balanced-text">
+        We don't just build solutions—we build stories of growth, efficiency, and alignment. Allē is more than a platform; it's a promise to empower teams to thrive together.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-2 gap-16">
+      
+      <div class="p-8 flex items-center justify-center">
+        <div class="videoThumbnail bg-gray-400 rounded-lg flex items-center justify-center">
+          <div class="w-30 h-30 bg-white rounded-full flex items-center justify-center">
+            <Icon name="mdi:play" color="#d8d8d8" size={75} />
+          </div>
+        </div>
+      </div>
+
+      <div class="p-8">
+        <h3 class="text-2xl font-bold mb-4">
+          Meet Allē: A Story of Innovation Born from Real Challenges
+        </h3>
+        <p>
+          Allē is more than a resource management tool—it's a collaborative companion designed to make teamwork both effective and enjoyable. By centralizing tools, offering scenario-based guidance, streamlining communication, and enabling seamless insight sharing, Allē fosters alignment across teams. It unites everyone on a single, adaptable platform, ensuring shared goals are met.
+          <br/><br/>
+          Allē transforms workdays from disconnected to confident and connected, serving as a trusted partner that drives efficiency and empowerment.
+        </p>
+      </div>
+      
+    </div>
+  </Container>
+</section>
+
+<style lang="scss">
+  .videoThumbnail{
+    //background-image: url('/images/video-thumbnail.png');
+    background-color: #d8d8d8;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 30px;
+  }
+</style>
