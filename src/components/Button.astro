@@ -1,0 +1,38 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon/components";
+import Container from "@components/container.astro";
+
+const { style, text, href, newTab } = Astro.props;
+---
+{
+  style === "outline" ? (
+    <a class="Button bg-transparent text-black font-bold border-2 border-black px-6 py-4 text-lg" href={href} target={newTab ? "_blank" : "_self"}>
+      {text ? text : "Button Text"}
+    </a>
+  ) : style === "green" ? (
+    <a class="Button bg-green-500 text-white font-bold px-6 py-4 text-lg" href={href} target={newTab ? "_blank" : "_self"}>
+      {text ? text : "Button Text"}
+    </a>
+  ) : style === "white" ? (
+    <a class="Button bg-white text-black font-bold px-6 py-4 text-lg" href={href} target={newTab ? "_blank" : "_self"}>
+      {text ? text : "Button Text"}
+    </a>
+  ) : (
+    <a class="Button bg-black text-white font-bold px-6 py-4 text-lg" href={href} target={newTab ? "_blank" : "_self"}>
+      {text ? text : "Button Text"}
+    </a>
+  )
+}
+
+
+
+<style lang="scss">
+  .Button{
+    border-radius: 50px;
+    display: inline-block;
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+  }
+</style>

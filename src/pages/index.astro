@@ -9,6 +9,9 @@ import Layout from "@layouts/Layout.astro";
 import HomeStats from "@components/HomeStats.astro";
 import HomeStory from "@components/HomeStory.astro";
 import HomeFeatures from "@components/HomeFeatures.astro";
+import HomeCta from "@components/HomeCta.astro";
+import HomePricing from "@components/HomePricing.astro";
+import HomeContact from "@components/HomeContact.astro";
 ---
 
 <Layout title="">
@@ -17,10 +20,8 @@ import HomeFeatures from "@components/HomeFeatures.astro";
   <HomeStats/>
   <HomeStory/>
   <HomeFeatures/>
-  <Container>
-    
-    <Features />
-    <Logos />
-    <Cta />
-  </Container>
+  <HomeCta/>
+  <HomePricing/>
+  <HomeContact/>
+  
 </Layout>

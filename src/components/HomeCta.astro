@@ -1,0 +1,66 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon/components";
+import Container from "@components/container.astro";
+import Button from "@components/Button.astro";
+---
+
+<section class="mb-32">
+  <Container>
+    <div class="ctaElement w-full flex flex-row items-center justify-center">
+      
+      <div class="textElement w-50">
+        <h2 class="text-4xl font-bold mb-4">
+          Unlock Your Team's Potential
+        </h2>
+        <p class="mb-8">
+          Commodo nec mi id ullamcorper vitae augue neque dis. Nunc lacinia viverra orci.
+        </p>
+        <Button href="/" text="Request a Demo" />
+      </div>
+
+      <div class="imageElement w-50 flex items-end justify-end">
+        <img src="/images/home-cta-bg-mockup.png" />
+      </div>
+
+      <div class="asideImage">
+        <img src="/images/home-cta-alle-robot.png" />
+      </div>
+    </div>
+  </Container>
+</section>
+
+<style lang="scss">
+  .ctaElement{
+    position: relative;
+    background-image: url('/images/home-cta-background.png');
+    background-color: #d8d8d8;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 30px;
+
+    width: 100%;
+    max-width: 1140px;
+    margin: auto;
+    
+    .textElement{
+      padding: 140px;
+      padding-right: 15px;
+      box-sizing: border-box;
+      align-self: stretch; 
+      width: 50%;
+    }
+    .imageElement{
+      align-self: stretch; 
+      width: 50%;
+    }
+    .asideImage{
+      position: absolute;
+      right: -150px;
+      bottom: -165px;
+      width: 440px;
+      height: 440px;
+    }
+  }
+</style>
