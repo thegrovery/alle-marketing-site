@@ -1,0 +1,146 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon/components";
+import Container from "@components/container.astro";
+import Button from "@components/Button.astro";
+
+const pricing = [
+  {
+    tag: "Entry Level",
+    title: "Basic Membership",
+    description: "In lobortis justo tortor viverra. Quis euismod purus cursus ultricies faucibus fringilla.",
+    bulletpoints: "<ul>\
+      <li>Access to beginner crypto courses</li>\
+      <li>Monthly market insights newsletter</li>\
+      <li>Limited access to trading tools</li>\
+      <li>Community forum participation</li>\
+      <li>Discount on select partner services</li>\
+    </ul>",
+    buttonText: "Get Started",
+    buttonLink: "/pricing#basic",
+    standout: false,
+  },
+  {
+    tag: "Intermediate Level",
+    title: "Pro Membership",
+    description: "In lobortis justo tortor viverra. Quis euismod purus cursus ultricies faucibus fringilla.",
+    bulletpoints: "<ul>\
+      <li>Full access to advanced crypto courses</li>\
+      <li>Weekly market analysis reports</li>\
+      <li>Set of trading tools and indicators</li>\
+      <li>Priority support from our team</li>\
+      <li>Exclusive webinars and events</li>\
+    </ul>",
+    buttonText: "Upgrade Pro Membership",
+    buttonLink: "/pricing#pro",
+    standout: true,
+  },
+  {
+    tag: "Premium Level",
+    title: "VIP Membership",
+    description: "In lobortis justo tortor viverra. Quis euismod purus cursus ultricies faucibus fringilla.",
+    bulletpoints: "<ul>\
+      <li>Personalized one-on-one consultations</li>\
+      <li>Daily market alerts and insights</li>\
+      <li>Access to exclusive research and reports</li>\
+      <li>Customized portfolio management</li>\
+      <li>Invitations to VIP events and networking</li>\
+    </ul>",
+    buttonText: "Become a VIP Member",
+    buttonLink: "/pricing#vip",
+    standout: false,
+  },
+  
+];
+---
+
+<section class="mb-16 py-16 bg-black text-white">
+  <Container>
+    <div class="headline mb-16 text-center">
+      <p class="text-sm text-orange-400">Membership</p>
+      <h2 class="text-6xl font-bold">
+        Your Gateway to Premium Allē Services
+      </h2>
+      <p class="text-lg mt-4 text-slate-200 balanced-text">
+        Commodo nec mi id ullamcorper vitae augue neque dis. Nunc lacinia viverra orci diam. Nibh est vitae suspendisse parturient sed lorem eu.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-3 gap-4">
+      {
+        pricing.map((item) => (
+          <div class="pricingCard p-8 border-2 border-gray-600 bg-gray-900">
+            
+            <div class="borderElement pb-8 mb-8">
+              <div class="tagElement inline-block text-yellow-400 border-2 border-yellow-600 rounded-3xl px-4 py-2 mb-4 text-sm">
+                {item.tag}
+              </div>
+              <div class="text-4xl mb-4">
+                {item.title}
+              </div>
+              <p class="text-lg text-slate-400">
+                {item.description}
+              </p>
+            </div>
+            
+            <div 
+              set:html={item.bulletpoints} 
+              class="pricingList"
+            ></div>
+
+            <div class="buttonWrapper flex justify-center items-center p-8">
+              {item.standout 
+                ? <Button href={item.buttonLink} text={item.buttonText} style="green"></Button> 
+                : <Button href={item.buttonLink} text={item.buttonText} style="white"></Button>
+              }
+            </div>
+
+          </div>
+        ))
+      }
+      
+    </div>
+  </Container>
+</section>
+
+<style>
+  .headline{
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    @apply mb-16;
+  }
+  .borderElement{
+    border-bottom: solid 1px #393A40;
+  }
+</style>
+
+<style is:global>
+  .pricingCard{
+    position: relative;
+    padding-bottom: 100px;
+    background-color: #19191B;
+    border: solid 1px #393A40;
+    border-radius: 30px;
+  }
+
+  .pricingList ul{
+    list-style-type: disc;
+    list-style-position: outside;
+    @apply pl-5;
+  }
+  .pricingList li{
+    @apply mb-4;
+  }
+  .pricingList li::marker{
+    color: #79F0B0;
+  }
+
+  .buttonWrapper{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+  }
+</style>

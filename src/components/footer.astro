@@ -1,19 +1,62 @@
-<footer class="my-20">
-  <p class="text-center text-sm text-slate-500">
-    Copyright © {new Date().getFullYear()} Astroship. All rights reserved.
-  </p>
-  <!--
-    Can we ask you a favor 🙏
-    Please keep this backlink on your website if possible.
-    or Purchase a commercial license from https://web3templates.com
-  -->
-  <p class="text-center text-xs text-slate-500 mt-1">
-    Made by <a
-      href="https://web3templates.com"
-      target="_blank"
-      rel="noopener"
-      class="hover:underline">
-      Web3Templates
-    </a>
-  </p>
+---
+import NewsletterForm from "./NewsletterForm.astro";
+import Container from "./container.astro";
+---
+
+<footer class="bg-black text-white pt-20 pb-10 px-16">
+  <Container>
+    <div class="grid grid-cols-2 border-b border-white pb-16 mb-8">
+      
+      <div class="linksSection">
+        <a class="logoElement" href="/">
+          <img src="/images/footer-logo.png" alt="Allē Logo" class="w-1/2">
+        </a>
+        <div>
+          <ul class="flex flex-row gap-4">
+            <li>
+              <a href="/overview">Overview</a>
+            </li>
+            <li>
+              <a href="/help">Help</a>
+            </li>
+            <li>
+              <a href="/privacy">Privacy</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="contactSection">
+        <NewsletterForm/>
+      </div>
+    
+    </div>
+
+    <div class="flex justify-start items-start">
+      <p class="text-sm ">
+        ©{new Date().getFullYear()} Allē. All rights reserved.
+      </p>
+    </div>
+
+
+  </Container>
 </footer>
+
+<style>
+  footer {
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    
+  }
+
+  .logoElement{
+    width: 158px;
+    max-width: 100%;
+    display: inline-block;
+    img{
+      display: block;
+      width: 100%;
+    }
+  }
+</style>
+

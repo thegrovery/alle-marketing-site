@@ -38,11 +38,6 @@ const makeTitle = title
       title={makeTitle}
       description="Astroship is a starter website template for Astro built with TailwindCSS."
       canonical={canonicalURL}
-      twitter={{
-        creator: "@surjithctly",
-        site: "@web3templates",
-        card: "summary_large_image",
-      }}
       openGraph={{
         basic: {
           url: canonicalURL,
@@ -63,8 +58,24 @@ const makeTitle = title
     <style is:global>
       /* Improve Page speed */
       /* https://css-tricks.com/almanac/properties/c/content-visibility/ */
+      a:not([class]){;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
       img {
+        max-width: 100%;
+        height: auto;
+        vertical-align: middle;
+        font-style: italic;
+        background-repeat: no-repeat;
+        background-size: cover;
+        shape-margin: 1rem;
         content-visibility: auto;
+      }
+      .balanced-text{
+        text-align: center;
+        text-wrap: balance;
       }
     </style>
   </body>

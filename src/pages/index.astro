@@ -5,14 +5,23 @@ import Features from "@components/features.astro";
 import Hero from "@components/hero.astro";
 import Logos from "@components/logos.astro";
 import Layout from "@layouts/Layout.astro";
+
+import HomeStats from "@components/HomeStats.astro";
+import HomeStory from "@components/HomeStory.astro";
+import HomeFeatures from "@components/HomeFeatures.astro";
+import HomeCta from "@components/HomeCta.astro";
+import HomePricing from "@components/HomePricing.astro";
+import HomeContact from "@components/HomeContact.astro";
 ---
 
 <Layout title="">
   <Hero />
-  <Container>
-    
-    <Features />
-    <Logos />
-    <Cta />
-  </Container>
+  
+  <HomeStats/>
+  <HomeStory/>
+  <HomeFeatures/>
+  <HomeCta/>
+  <HomePricing/>
+  <HomeContact/>
+  
 </Layout>

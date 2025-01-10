@@ -1,0 +1,69 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon/components";
+import Container from "@components/container.astro";
+import Button from "@components/Button.astro";
+import ContactForm from "@components/contactform.astro";``
+
+---
+
+<section class="mb-16 py-16">
+  <Container>
+    <div class="grid grid-cols-2">
+      <div class="">
+        <h2 class="text-6xl font-bold">
+          Connect with Allē
+      </h2>
+      <p class="text-lg">
+        Reach out to discover how Alle’s solutions can empower your team to grow, collaborate, and stay aligned every step of the way.
+      </p>
+      <img src="/images/home-contact-robot.png" alt="Allē Robot" class="w-full">
+    </div>
+
+    <div class="flex justify-center items-center bg-grey-500 text-black p-16">
+      <ContactForm/>
+    </div>
+  </Container>
+</section>
+
+<style>
+  .headline{
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    @apply mb-16;
+  }
+  .borderElement{
+    border-bottom: solid 1px #393A40;
+  }
+</style>
+
+<style is:global>
+  .pricingCard{
+    position: relative;
+    padding-bottom: 100px;
+    background-color: #19191B;
+    border: solid 1px #393A40;
+    border-radius: 30px;
+  }
+
+  .pricingList ul{
+    list-style-type: disc;
+    list-style-position: outside;
+    @apply pl-5;
+  }
+  .pricingList li{
+    @apply mb-4;
+  }
+  .pricingList li::marker{
+    color: #79F0B0;
+  }
+
+  .buttonWrapper{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+  }
+</style>
