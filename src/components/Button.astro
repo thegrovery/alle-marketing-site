@@ -7,15 +7,33 @@ const { style, text, href, newTab } = Astro.props;
 ---
 {
   style === "outline" ? (
-    <a class="Button bg-transparent text-black font-bold border-2 border-black px-6 py-4 text-lg" href={href} target={newTab ? "_blank" : "_self"}>
+    <a 
+      class="Button 
+        bg-transparent text-black font-bold border-2 border-black px-6 py-4 text-lg 
+        hover:bg-white hover:text-black" 
+      href={href} 
+      target={newTab ? "_blank" : "_self"}
+    >
       {text ? text : "Button Text"}
     </a>
   ) : style === "green" ? (
-    <a class="Button bg-green-500 text-white font-bold px-6 py-4 text-lg" href={href} target={newTab ? "_blank" : "_self"}>
+    <a 
+      class="Button 
+        bg-green text-black font-bold px-6 py-4 text-lg 
+        hover:bg-black hover:text-white border-2 border-green" 
+      href={href} 
+      target={newTab ? "_blank" : "_self"}
+    >
       {text ? text : "Button Text"}
     </a>
   ) : style === "white" ? (
-    <a class="Button bg-white text-black font-bold px-6 py-4 text-lg" href={href} target={newTab ? "_blank" : "_self"}>
+    <a 
+      class="Button 
+        bg-white text-black font-bold px-6 py-4 text-lg 
+        hover:bg-black hover:text-white border-2 border-white" 
+      href={href} 
+      target={newTab ? "_blank" : "_self"}
+    >
       {text ? text : "Button Text"}
     </a>
   ) : (
