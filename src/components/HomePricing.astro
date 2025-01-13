@@ -57,22 +57,22 @@ const pricing = [
 <section class="mb-16 py-16 bg-black text-white">
   <Container>
     <div class="headline mb-16 text-center">
-      <p class="text-sm text-orange-400">Membership</p>
+      <p class="text-sm text-gold">Membership</p>
       <h2 class="text-6xl font-bold">
         Your Gateway to Premium Allē Services
       </h2>
-      <p class="text-lg mt-4 text-slate-200 balanced-text">
+      <p class="text-lg mt-4 text-gray-400 balanced-text">
         Commodo nec mi id ullamcorper vitae augue neque dis. Nunc lacinia viverra orci diam. Nibh est vitae suspendisse parturient sed lorem eu.
       </p>
     </div>
 
-    <div class="grid grid-cols-3 gap-4">
+    <div class="grid lg:grid-cols-3 grid-cols-1 gap-4">
       {
         pricing.map((item) => (
           <div class="pricingCard p-8 border-2 border-gray-600 bg-gray-900">
             
             <div class="borderElement pb-8 mb-8">
-              <div class="tagElement inline-block text-yellow-400 border-2 border-yellow-600 rounded-3xl px-4 py-2 mb-4 text-sm">
+              <div class="tagElement inline-block text-gold border-2 border-gold rounded-3xl px-4 py-2 mb-4 text-sm">
                 {item.tag}
               </div>
               <div class="text-4xl mb-4">
