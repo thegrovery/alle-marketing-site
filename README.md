@@ -4,6 +4,11 @@ This repo is the marketing website for Allē, The Grovery's resource management,
 
 ---
 
+## Notes
+
+- The name "Alle" should always be written as "Allē".
+---
+
 ## How To Use
 
 ### Basic Commands
