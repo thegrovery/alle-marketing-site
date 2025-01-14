@@ -7,9 +7,9 @@ import Button from "@components/Button.astro";
 
 <section class="mb-32">
   <Container>
-    <div class="ctaElement w-full flex flex-row items-center justify-center">
+    <div class="ctaElement w-full flex lg:flex-row flex-col items-center justify-center">
       
-      <div class="textElement w-50">
+      <div class="textElement lg:w-50 w-full">
         <h2 class="text-4xl font-bold mb-4">
           Unlock Your Team's Potential
         </h2>
@@ -19,7 +19,7 @@ import Button from "@components/Button.astro";
         <Button href="/" text="Request a Demo" />
       </div>
 
-      <div class="imageElement w-50 flex items-end justify-end">
+      <div class="imageElement lg:w-50 w-full flex items-end justify-end">
         <img src="/images/home-cta-bg-mockup.png" />
       </div>
 
@@ -49,11 +49,14 @@ import Button from "@components/Button.astro";
       padding-right: 15px;
       box-sizing: border-box;
       align-self: stretch; 
-      width: 50%;
+      //width: 50%;
+      @media (max-width: 1024px) {
+        padding: 50px 25px;
+      }
     }
     .imageElement{
       align-self: stretch; 
-      width: 50%;
+      //width: 50%;
     }
     .asideImage{
       position: absolute;
@@ -61,6 +64,13 @@ import Button from "@components/Button.astro";
       bottom: -165px;
       width: 440px;
       height: 440px;
+
+      @media (max-width: 1024px) {
+        right: -10vw;
+        bottom: -15vw;
+        width: 50vw;
+        height: 50vw;
+      }
     }
   }
 </style>

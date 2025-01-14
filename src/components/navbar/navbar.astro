@@ -4,7 +4,7 @@ import Link from "@components/ui/link.astro";
 import Dropdown from "./dropdown.astro";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 
-const menuitems = [
+/*const menuitems = [
   {
     title: "Features",
     path: "#",
@@ -31,11 +31,27 @@ const menuitems = [
     title: "Contact",
     path: "/contact",
   },
+  
+];*/
+
+const menuitems = [
   {
-    title: "Pro Version",
-    badge: true,
-    path: "https://astroship-pro.web3templates.com/",
+    title: "About Us",
+    path: "/about",
   },
+  {
+    title: "Features",
+    path: "/features",
+  },
+  {
+    title: "Pricing",
+    path: "/pricing",
+  },
+  {
+    title: "Contact Us",
+    path: "/contact",
+  },
+  
 ];
 ---
 
@@ -43,10 +59,8 @@ const menuitems = [
   <header class="flex flex-col lg:flex-row justify-between items-center my-5">
     <Astronav>
       <div class="flex w-full lg:w-auto items-center justify-between">
-        <a href="/" class="text-lg"
-          ><span class="font-bold text-slate-800">Astro</span><span
-            class="text-slate-500">ship</span
-          >
+        <a href="/" class="text-lg">
+          <img src="/images/header-logo.png" class="" />
         </a>
         <div class="block lg:hidden">
           <MenuIcon class="w-4 h-4 text-gray-800" />
@@ -84,15 +98,15 @@ const menuitems = [
           }
         </ul>
         <div class="lg:hidden flex items-center mt-3 gap-4">
-          <Link href="#" style="muted" block size="md">Log in</Link>
-          <Link href="#" size="md" block>Sign up</Link>
+          <!-- <Link href="#" style="muted" block size="md">Log in</Link> -->
+          <Link href="#" size="md" block>Request a Demo</Link>
         </div>
       </MenuItems>
     </Astronav>
     <div>
       <div class="hidden lg:flex items-center gap-4">
-        <a href="#">Log in</a>
-        <Link href="#" size="md">Sign up</Link>
+        <!-- <a href="#">Log in</a> -->
+        <Link href="#" size="md">Request a Demo</Link>
       </div>
     </div>
   </header>

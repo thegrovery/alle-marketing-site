@@ -1,0 +1,28 @@
+---
+import { Picture } from "astro:assets";
+import heroImage from "assets/hero.png";
+import Link from "@components/ui/link.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<main
+  class="relative grid lg:grid-cols-1 place-items-center pt-16 pb-8 bg-cover bg-center"
+  style="background-image: url('/images/hero-background-gradient.png');"
+>
+  <div class="">
+    <!-- <Picture
+      src={heroImage}
+      alt="Astronaut in the air"
+      widths={[200, 400, 600]}
+      sizes="(max-width: 800px) 100vw, 620px"
+      loading="eager"
+      format="avif"
+    /> -->
+    <img 
+      class="w-full"
+      src="/images/combined-hero-assets-lockup.png" 
+      alt="Unite. Collaborate. Achieve. With Allē, by The Grovery." 
+    />
+  </div>
+  
+</main>

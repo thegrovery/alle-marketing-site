@@ -29,10 +29,10 @@ const stats = [
 ];
 ---
 
-<section class="mb-16">
+<section class="mb-40">
   <Container>
-    <div class="headline mb-16 text-center">
-      <h2 class="text-6xl lg:text-5xl font-bold lg:tracking-tight">
+    <div class="headline mb-16 text-center ">
+      <h2 class="text-6xl lg:text-5xl font-bold lg:tracking-tight font-display">
         Insights into Team Alignment
       </h2>
       <p class="text-lg mt-4 text-slate-600">
@@ -40,18 +40,18 @@ const stats = [
       </p>
     </div>
 
-    <div class="grid grid-cols-3 gap-16">
+    <div class="grid lg:grid-cols-3 grid-cols-1 gap-16">
       {
         stats.map((item) => (
           <div class="card text-center">
-            <div class="card-number text-5xl font-bold text-yellow-400 ">
+            <div class="card-number text-5xl font-bold text-gold ">
               {item.percentage}
             </div>
-            <div class="text-3xl font-bold balanced-text">
+            <div class="text-3xl font-bold balanced-text font-display">
               {item.description}
             </div>
-            <div class="mt-4 text-sm text-slate-400 underline">
-              <a href="#">{item.linkName}</a>
+            <div class="mt-4 text-gray-400">
+              <a href={item.linkUrl} class="text-sm text-gray-400 underline">{item.linkName}</a>
             </div>
           </div>
         ))

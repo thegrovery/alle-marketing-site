@@ -3,18 +3,26 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 module.exports = {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
-    colors: {
-      'black': '#000000',
-      'white': '#ffffff',
-      "gold": "#FFD700",
-    },
     extend: {
+      colors: {
+        'black': '#070113',
+        'black-1': '#0A0A0A',
+        'white': '#ffffff',
+        'white-1': '#C0C0C0',
+        'white-2': '#F7F8FF',
+        "gold": "#EFBD42",
+        "green": "#4DD64B",
+        "green-1": "#79F0B0",
+      },
       fontFamily: {
         sans: [
-          "Bricolage Grotesque Variable",
-          "Inter Variable",
-          "Inter",
+          "DM Sans",
           ...defaultTheme.fontFamily.sans,
+        ],
+        "display": [
+          "Syne", 
+          "DM Sans", 
+          ...defaultTheme.fontFamily.sans
         ],
       },
     },

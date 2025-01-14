@@ -3,25 +3,25 @@
 import { Icon } from "astro-icon/components";
 import Container from "@components/container.astro";
 import Button from "@components/Button.astro";
-import ContactForm from "@components/contactform.astro";``
+import ContactFormMain from "@components/ContactFormMain.astro";
 
 ---
 
 <section class="mb-16 py-16">
   <Container>
-    <div class="grid grid-cols-2">
+    <div class="grid lg:grid-cols-2 grid-cols-1">
       <div class="">
         <h2 class="text-6xl font-bold">
           Connect with Allē
       </h2>
-      <p class="text-lg">
-        Reach out to discover how Alle’s solutions can empower your team to grow, collaborate, and stay aligned every step of the way.
+      <p class="text-lg text-gray-600">
+        Reach out to discover how Allē's solutions can empower your team to grow, collaborate, and stay aligned every step of the way.
       </p>
       <img src="/images/home-contact-robot.png" alt="Allē Robot" class="w-full">
     </div>
 
-    <div class="flex justify-center items-center bg-grey-500 text-black p-16">
-      <ContactForm/>
+    <div class="flex justify-start items-center bg-grey-500 text-black p-8">
+      <ContactFormMain/>
     </div>
   </Container>
 </section>
