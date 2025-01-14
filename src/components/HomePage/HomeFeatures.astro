@@ -30,7 +30,7 @@ const features = [
 <section class="mb-16 bg-black text-white grid lg:grid-cols-2 grid-cols-1">
   
   <div class="py-16 lg:pl-16 px-8">
-    <p class="text-sm text-gold">Our Features</p>
+    <p class="text-sm text-gold font-bold">Our Features</p>
     <h2 class="text-6xl lg:text-5xl font-bold  lg:tracking-tight mb-8">
       Allē's Key Features
     </h2>
@@ -44,7 +44,7 @@ const features = [
               <img src={item.icon} class="w-10" />
             </div>
 
-            <div class="text-3xl font-bold">
+            <div class="text-3xl font-bold font-display">
               {item.title}
             </div>
             <div class="mt-4 text-sm">
@@ -58,7 +58,7 @@ const features = [
   </div>
 
   <div class="flex justify-end items-center">
-    <img src="/images/features-devices-mockups-combined.png" class="" />
+    <img src="/images/features-devices-mockups-combined.png" class="mockupImage" />
   </div>
   
 </section>
@@ -75,5 +75,11 @@ const features = [
     height: 100%;
     aspect-ratio: 16/9;
     border-radius: 30px;
+  }
+  @media (max-width: 1024px) {
+    .mockupImage{
+      width: 100%;
+      max-width: 600px;
+    }
   }
 </style>
