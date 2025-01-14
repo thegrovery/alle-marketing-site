@@ -2,21 +2,21 @@
 import Container from "@components/container.astro";
 import Cta from "@components/cta.astro";
 import Features from "@components/features.astro";
-import Hero from "@components/hero.astro";
+
 import Logos from "@components/logos.astro";
 import Layout from "@layouts/Layout.astro";
 
-import HomeStats from "@components/HomeStats.astro";
-import HomeStory from "@components/HomeStory.astro";
-import HomeFeatures from "@components/HomeFeatures.astro";
-import HomeCta from "@components/HomeCta.astro";
-import HomePricing from "@components/HomePricing.astro";
-import HomeContact from "@components/HomeContact.astro";
+import HomeHero from "@components/HomePage/HomeHero.astro";
+import HomeStats from "@components/HomePage/HomeStats.astro";
+import HomeStory from "@components/HomePage/HomeStory.astro";
+import HomeFeatures from "@components/HomePage/HomeFeatures.astro";
+import HomeCta from "@components/HomePage/HomeCta.astro";
+import HomePricing from "@components/HomePage/HomePricing.astro";
+import HomeContact from "@components/HomePage/HomeContact.astro";
 ---
 
 <Layout title="">
-  <Hero />
-  
+  <HomeHero />
   <HomeStats/>
   <HomeStory/>
   <HomeFeatures/>

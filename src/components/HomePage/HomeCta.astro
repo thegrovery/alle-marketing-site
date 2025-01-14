@@ -7,7 +7,7 @@ import Button from "@components/Button.astro";
 
 <section class="mb-32">
   <Container>
-    <div class="ctaElement w-full flex md:flex-row flex-col items-center justify-center">
+    <div class="ctaElement w-full flex lg:flex-row flex-col items-center justify-center">
       
       <div class="textElement lg:w-50 w-full">
         <h2 class="text-4xl font-bold mb-4">
@@ -49,11 +49,14 @@ import Button from "@components/Button.astro";
       padding-right: 15px;
       box-sizing: border-box;
       align-self: stretch; 
-      width: 50%;
+      //width: 50%;
+      @media (max-width: 1024px) {
+        padding: 50px 25px;
+      }
     }
     .imageElement{
       align-self: stretch; 
-      width: 50%;
+      //width: 50%;
     }
     .asideImage{
       position: absolute;

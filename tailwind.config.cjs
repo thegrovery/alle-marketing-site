@@ -3,7 +3,6 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 module.exports = {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
-    
     extend: {
       colors: {
         'black': '#070113',
@@ -17,10 +16,13 @@ module.exports = {
       },
       fontFamily: {
         sans: [
-          "Bricolage Grotesque Variable",
-          "Inter Variable",
-          "Inter",
+          "DM Sans",
           ...defaultTheme.fontFamily.sans,
+        ],
+        "display": [
+          "Syne", 
+          "DM Sans", 
+          ...defaultTheme.fontFamily.sans
         ],
       },
     },
