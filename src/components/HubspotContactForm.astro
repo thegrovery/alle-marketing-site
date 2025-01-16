@@ -1,0 +1,79 @@
+---
+import Button from "./ui/button.astro";
+
+const { form } = Astro.props;
+---
+
+<!-- Maybe make this a global script - comment out and note if moved -->
+<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+
+
+<div class={form ? form : "general-form"}>
+  {form === "contact" ? (
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        hbspt.forms.create({
+          portalId: "39959608",
+          formId: "294e5671-ecd7-4828-a1d2-b30a2ba18774"
+        });
+      });
+    </script>
+  ) : form === "newsletter" ? (
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        hbspt.forms.create({
+          portalId: "39959608",
+          formId: "294e5671-ecd7-4828-a1d2-b30a2ba18774"
+        });
+      });
+    </script>
+  ) : form === "demo" ? (
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        hbspt.forms.create({
+          portalId: "39959608",
+          formId: "294e5671-ecd7-4828-a1d2-b30a2ba18774"
+        });
+      });
+    </script>
+  ) : ( /* Default to contact form */
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        hbspt.forms.create({
+          portalId: "39959608",
+          formId: "294e5671-ecd7-4828-a1d2-b30a2ba18774"
+        });
+      });
+    </script>
+  )}
+</div>  
+
+<style is:global>
+  .hbspt-form{
+    label{
+      @apply font-bold;
+    }
+    input:not([type="submit"]),
+    textarea{
+      @apply w-full px-4 py-3 border-2 bg-white-2 placeholder:text-gray-800 rounded-md outline-none focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100;
+    }
+
+    input[type="submit"]{
+      @apply bg-black text-white font-bold px-6 py-4 rounded-full text-lg;
+    }
+
+    .hs-error-msg{
+      @apply text-red-400 text-sm mt-1;
+    }
+
+    form{
+      @apply grid grid-cols-2 gap-5;
+    }
+    .hs-form-field{
+      @apply col-span-2;
+    }
+    .hs-firstname, .hs-lastname{
+      @apply col-span-1;
+    }
+  }
+</style>
