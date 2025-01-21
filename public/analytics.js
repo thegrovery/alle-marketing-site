@@ -1,42 +1,44 @@
 /* ===== =================================== ===== */
 /* ===== Main Function - Simple Event Pusher ===== */
 /* ===== =================================== ===== */
+function AnalyticsBundle(){
+    let consoleLogPrefix = "SimpleAnalyticsEvent |";
 
-function SimpleAnalyticsEvent(event_name){
-    //console log tester
-    console.groupCollapsed("===== Dynamically-Named Analytics Event Triggered =====");
-    console.log("Event Name: [dynamic_event_name]");
-    console.log("Event Detail: ["+event_name+"]");
-    console.log("NOTES: To QA events, look under: Google Analytics Container > Realtime > Event Count by Event Name");
-    console.groupEnd();
+    function SimpleAnalyticsEvent(event_name){
+        console.log(`${consoleLogPrefix} event triggered: ${event_name}`);
 
-    try {
-        //Push event to datalayer
-        window.dataLayer = window.dataLayer || [];
-        dataLayer.push({
-            'event': "dynamic_event_name",
-            'event_detail': event_name,
-        });
-        console.log("===== Dynamically-Named Analytics Event Pushed =====");
-    } catch (e) {
-        console.log("===== Dynamically-Named Analytics Event Error =====");
-    }
-};  
+        try {
+            //Push event to datalayer
+            window.dataLayer = window.dataLayer || [];
+            dataLayer.push({
+                'event': "dynamic_event_name",
+                'event_detail': event_name,
+            });
+            console.log(`${consoleLogPrefix} event push success: ${event_name}`);
+        } catch (e) {
+            console.log(`${consoleLogPrefix} event push error: ${event_name}`);
+        }
+    };  
 
-function SimpleAnalyticsEventListeners(){
-    //Standard click events
-    let clickElements = document.querySelectorAll('[data-click-event]');
-    clickElements.forEach(element => {
-        element.addEventListener('click', function() {
+    function SimpleAnalyticsEventListeners(){
+        //Standard click events
+        let clickElements = document.querySelectorAll('[data-click-event]');
+        clickElements.forEach(element => {
             let event_name = element.getAttribute("data-click-event");
-            SimpleAnalyticsEvent(event_name);
-        }, false);
-    });
-}
+            console.log(`${consoleLogPrefix} event element ready: ${event_name}`);
+            element.addEventListener('click', function() {
+                SimpleAnalyticsEvent(event_name);
+            }, false);
+        });
+    }
 
+    //Run event listeners
+    SimpleAnalyticsEventListeners();
 
+    
+};
 
 document.addEventListener("DOMContentLoaded", function(e){
-	//runs code after DOM load
-    SimpleAnalyticsEventListeners();
+    //runs code after DOM load
+    AnalyticsBundle();
 });

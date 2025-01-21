@@ -38,18 +38,22 @@ const menuitems = [
   {
     title: "About Us",
     path: "/#about",
+    eventDetail: "about_us"
   },
   {
     title: "Features",
     path: "/#features",
+    eventDetail: "features"
   },
   {
     title: "Pricing",
     path: "/#pricing",
+    eventDetail: "pricing"
   },
   {
     title: "Contact Us",
     path: "/#contact",
+    eventDetail: "contact_us"
   },
   
 ];
@@ -59,7 +63,7 @@ const menuitems = [
   <header class="flex flex-col lg:flex-row justify-between items-center my-5">
     <Astronav>
       <div class="flex w-full lg:w-auto items-center justify-between">
-        <a href="/" class="text-lg">
+        <a href="/" class="text-lg" data-click-event={`navbar_click_home`}>
           <img src="/images/header-logo.png" class="" />
         </a>
         <div class="block lg:hidden">
@@ -83,7 +87,9 @@ const menuitems = [
                   <li>
                     <a
                       href={item.path}
-                      class="font-display lg:flex block lg:text-left text-right lg:px-3 py-2 items-center lg:text-xl text-5xl  text-gray-600 hover:text-gray-900">
+                      class="font-display lg:flex block lg:text-left text-right lg:px-3 py-2 items-center lg:text-xl text-5xl text-black hover:underline"
+                      data-click-event={`navbar_click_${item.eventDetail}`}
+                    >
                       <span> {item.title}</span>
                       {item.badge && (
                         <span class="ml-1 px-2 py-0.5 text-[10px] animate-pulse font-semibold uppercase text-white bg-indigo-600 rounded-full">
@@ -99,14 +105,14 @@ const menuitems = [
         </ul>
         <div class="lg:hidden flex items-center mt-3 gap-4">
           <!-- <Link href="#" style="muted" block size="md">Log in</Link> -->
-          <Link href="/contact" size="md" block>Request a Demo</Link>
+          <Link href="/contact" size="md" block data-click-event={`navbar_click_request_demo`}>Request a Demo</Link>
         </div>
       </MenuItems>
     </Astronav>
     <div>
       <div class="hidden lg:flex items-center gap-4">
         <!-- <a href="#">Log in</a> -->
-        <Link href="/contact" size="md">Request a Demo</Link>
+        <Link href="/contact" size="md" data-click-event={`navbar_click_request_demo`}>Request a Demo</Link>
       </div>
     </div>
   </header>
