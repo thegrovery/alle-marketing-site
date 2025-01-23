@@ -23,7 +23,7 @@ const { form } = Astro.props;
       document.addEventListener("DOMContentLoaded", function() {
         hbspt.forms.create({
           portalId: "39959608",
-          formId: "294e5671-ecd7-4828-a1d2-b30a2ba18774"
+          formId: "f97884a3-3c5a-4ded-a52f-2534687ceaa1"
         });
       });
     </script>
@@ -49,31 +49,76 @@ const { form } = Astro.props;
 </div>  
 
 <style is:global>
-  .hbspt-form{
-    label{
-      @apply font-bold;
-    }
-    input:not([type="submit"]),
-    textarea{
-      @apply w-full px-4 py-3 border-2 bg-white-2 placeholder:text-gray-800 rounded-md outline-none focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100;
-    }
+  .general-form,
+  .contact{
+    .hbspt-form{
+      label{
+        @apply font-bold;
+      }
+      input:not([type="submit"]),
+      textarea{
+        @apply w-full px-4 py-3 border-2 bg-white-2 placeholder:text-gray-800 rounded-md outline-none focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100;
+      }
 
-    input[type="submit"]{
-      @apply bg-black text-white font-bold px-6 py-4 rounded-full text-lg;
-    }
+      input[type="submit"]{
+        @apply bg-black text-white font-bold px-6 py-4 rounded-full text-lg;
+      }
 
-    .hs-error-msg{
-      @apply text-red-400 text-sm mt-1;
-    }
+      .hs-error-msg{
+        @apply text-red-400 text-sm mt-1;
+      }
 
-    form{
-      @apply grid grid-cols-2 gap-5;
-    }
-    .hs-form-field{
-      @apply col-span-2;
-    }
-    .hs-firstname, .hs-lastname{
-      @apply col-span-1;
+      form{
+        @apply grid grid-cols-2 gap-5;
+      }
+      .hs-form-field{
+        @apply col-span-2;
+      }
+      .hs-firstname, .hs-lastname{
+        @apply col-span-1;
+      }
     }
   }
+
+  .newsletter{
+    .hbspt-form form{
+      @apply grid grid-cols-3 gap-5;
+      label{
+        @apply font-bold;
+      }
+      .hs-form-field{
+        @apply col-span-2;
+      }
+      input:not([type="submit"]),
+      textarea{
+        @apply w-full rounded-full px-4 py-3 border-2  placeholder:text-gray-800 rounded-md outline-none focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100;
+        border-radius: 12rem;
+        background: transparent;
+        border-color: rgb(156 163 175 / var(--tw-text-opacity));
+        &::placeholder{
+          color: rgb(156 163 175 / var(--tw-text-opacity));
+          
+        }
+      }
+
+      input[type="submit"]{
+        @apply bg-white text-black font-bold px-6 py-4 rounded-full text-base;
+      }
+
+      .hs-error-msg{
+        @apply text-red-400 text-sm mt-1;
+      }
+
+      form{
+        @apply grid grid-cols-2 gap-5;
+      }
+      .hs-form-field{
+        @apply col-span-2;
+      }
+      .hs-firstname, .hs-lastname{
+        @apply col-span-1;
+      }
+    }
+  }
+  
 </style>
