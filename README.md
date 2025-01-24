@@ -2,6 +2,11 @@
 
 This repo is the marketing website for Allē, The Grovery's resource management, team alignment, and training platform. This is not the main repo for the Allē project, rather, it is the static website for marketing and advertising Allē as a product.
 
+## Links
+
+- [Netlify Staging](https://alle-marketing-site.netlify.app)
+- [Netlify Dashboard](https://app.netlify.com/sites/alle-marketing-site/overview)
+
 ---
 
 ## Notes
