@@ -9,6 +9,10 @@ import { Icon } from "astro-icon/components";
   class="relative grid lg:grid-cols-1 place-items-center pt-16 pb-8 bg-cover bg-center"
   style="background-image: url('/images/hero-background-gradient.png');"
 >
+  <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover">
+    <source src="/videos/home-hero-video-bg.webm" type="video/webm">
+    <source src="/videos/home-hero-video-bg.mp4" type="video/mp4">
+  </video>
   <h1 class="sr-only">Unite. Collaborate. Achieve.</h1>
   <div class="">
     <!-- <Picture
@@ -22,7 +26,7 @@ import { Icon } from "astro-icon/components";
     <img 
       class="w-full"
       src="/images/combined-hero-assets-lockup.png" 
-      alt="Unite. Collaborate. Achieve. Empowered your team with Allē, by The Grovery." 
+      alt="Unite. Collaborate. Achieve. With Allē, by The Grovery." 
     />
   </div>
   
